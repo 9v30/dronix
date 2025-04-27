@@ -66,6 +66,16 @@ export class Database {
         return this.db.all(sql, params);
     }
 
+
+    async getChangeLog() {
+        try {
+            const logs = await this.db.all('SELECT * FROM change_log ORDER BY timestamp DESC');
+            return logs;
+        } catch (err) {
+            throw new Error('Failed to fetch change log');
+        }
+    }
+
     async close() {
         return this.db.close();
     }
