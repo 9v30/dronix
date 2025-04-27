@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+}
+html, body {
+  overscroll-behavior: none;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#userSection {
+  display: flex;
+  align-items: center;
+}
+
+#username {
+  margin-left: 10px;
+}
+
+.modal {
+  display: none; /* 初期状態では非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+p {
+  text-align: center;
+}
+
+/* 入力フォームをきれいに整列させる */
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form button[type="submit"] {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* バツボタンのスタイル */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* エラーメッセージのスタイル */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+
+/* ヘッダーのスタイル */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.service-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none; /* リンクの下線を消す */
+  color: white; /* 白文字にする */
+  cursor: pointer;
+}
+
+#userSection {
+  display: flex;
+  align-items: center;
+}
+
+#username {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+#loginBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#loginBtn:hover {
+  background-color: #0056b3;
+}
+
+
+/* mainのスタイル */
+main {
+  padding: 20px;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: calc(100vh - 80px); /* ヘッダーを除いた残りの高さ */
+}
+
+main h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+main p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET/POST デバッグツール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f4f4f4;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>GET/POST デバッグツール</h1>
+    
+    <div class="container">
+        <label for="method">メソッドを選択</label>
+        <select id="method">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <label for="url">URL</label>
+        <input type="text" id="url" placeholder="例: https://jsonplaceholder.typicode.com/posts">
+    </div>
+
+    <div class="container" id="params-container">
+        <label for="params">パラメータ (JSON形式)</label>
+        <textarea id="params" placeholder='例: {"key1": "value1", "key2": "value2"}'></textarea>
+    </div>
+
+    <button id="sendRequest">リクエスト送信</button>
+
+    <div class="response" id="response">
+        <h2>レスポンス</h2>
+        <pre id="response-text"></pre>
+    </div>
+
+    <script>
+        document.getElementById('sendRequest').addEventListener('click', async function () {
+            const method = document.getElementById('method').value;
+            const url = document.getElementById('url').value;
+            const params = document.getElementById('params').value;
+            const responseTextElement = document.getElementById('response-text');
+
+            let options = {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            // localStorageからトークンを取得し、AuthorizationヘッダーにBearerを追加
+            const token = localStorage.getItem('token'); // 'token'はlocalStorageに保存されているキー
+            if (token) {
+                options.headers['Authorization'] = `Bearer ${token}`;
+            }
+
+            // POSTの場合はボディにパラメータを追加
+            if (method === 'POST' && params) {
+                try {
+                    options.body = JSON.stringify(JSON.parse(params));
+                } catch (e) {
+                    responseTextElement.textContent = 'JSON形式のパラメータが無効です';
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch(url, options);
+                const responseBody = await response.text();
+
+                responseTextElement.textContent = `ステータスコード: ${response.status}\n\n${responseBody}`;
+            } catch (error) {
+                responseTextElement.textContent = 'リクエストに失敗しました。URLやパラメータを確認してください。';
+            }
+        });
+    </script>
+</body>
+</html>
