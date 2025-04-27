@@ -81,6 +81,19 @@ app.delete('/delete', authenticate(userManager), async (req, res) => {
     }
 });
 
+app.get('/history', authenticate(userManager), async (req, res) => {
+    if (req.user.username !== 'kz0x') {
+        return res.status(403).json({ success: false, error: 'Access forbidden' });
+    }
+
+    try {
+        const logs = await db.getChangeLog();
+        res.json({ success: true, logs });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, error: 'Failed to fetch history' });
+    }
+});
 
 app.listen(7777, () => {
     console.log('Server running on http://localhost:7777');
