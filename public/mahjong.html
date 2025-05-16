@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Mahjong Yaku Guide</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .yaku {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .tiles {
+      margin: 10px 0;
+    }
+    .tiles img {
+      height: 40px;
+      margin-right: 5px;
+    }
+    .note {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Mahjong Yaku Guide</h1>
+  <p>This guide explains basic yaku (winning hands) in riichi mahjong. It's for beginners who don't know any yaku yet. Each example shows if you can call (naki) or not, and tile images are included.</p>
+
+  <div class="yaku">
+    <h2>1. Riichi</h2>
+    <p>Declare ready with a closed hand. You can't call tiles (no naki).</p>
+    <div class="note">Naki: ❌ Not allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>2. Tanyao (All Simples)</h2>
+    <p>A hand with only 2-8 tiles. No terminals (1, 9) or honor tiles.</p>
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Man2.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Sou3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin6.png">
+    </div>
+    <div class="note">Naki: ✅ Allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>3. Yakuhai (Value Tiles)</h2>
+    <p>Three of the same dragon or your seat wind or round wind.</p>
+<p>Yakuhai are special tiles that give you a yaku (winning value) when you collect a triplet (3 of the same tile). There are three types of Yakuhai:
+Dragon tiles – White (Haku), Green (Hatsu), and Red (Chun)
+Seat Wind – Your current seat (East, South, West)
+Round Wind – The wind of the current round</p>
+
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Chun.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Chun.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Chun.png">
+    </div>
+    <div class="note">Naki: ✅ Allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>4. Pinfu (No Points Hand)</h2>
+    <p>All sequences, no points. Must be closed and have two-sided wait. The pair (head) must not be a value/honor tile (no yakuhai).</p>
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Sou4.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Sou5.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Sou6.png">
+    </div>
+    <div class="note">Naki: ❌ Not allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>5. Iipeikou (Pure Double Sequence)</h2>
+    <p>Two identical sequences in the same suit. Must be closed.</p>
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin2.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin4.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin2.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/refs/heads/master/Export/Regular/Pin4.png">
+    </div>
+    <div class="note">Naki: ❌ Not allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>6. Toitoi (All Triplets)</h2>
+    <p>A hand made entirely of triplets (three of a kind) or quads. You can call pon or kan.</p>
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Man3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Man3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Man3.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Nan.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Nan.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Nan.png">
+    </div>
+    <div class="note">Naki: ✅ Allowed</div>
+  </div>
+
+  <div class="yaku">
+    <h2>7. Kokushi Musou (Thirteen Orphans)</h2>
+    <p>One of each terminal (1 & 9) and honor tile, plus one duplicate. Very rare yakuman.</p>
+    <p>If you have 10 or more different required tiles early in the game, consider aiming for it.</p>
+    <div class="tiles">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Man1.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Man9.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Pin1.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Pin9.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Sou1.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Sou9.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Ton.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Nan.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Shaa.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Pei.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Haku.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Hatsu.png">
+      <img src="https://raw.githubusercontent.com/FluffyStuff/riichi-mahjong-tiles/master/Export/Regular/Chun.png">
+    </div>
+    <div class="note">Naki: ❌ Not allowed</div>
+  </div>
+
+</body>
+</html>
